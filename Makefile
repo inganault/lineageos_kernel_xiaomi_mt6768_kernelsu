@@ -1985,3 +1985,9 @@ FORCE:
 # Declare the contents of the .PHONY variable as phony.  We keep that
 # information in a variable so we can use it in if_changed and friends.
 .PHONY: $(PHONY)
+
+# Ignore mediatek errors
+KBUILD_CFLAGS += -Wno-error=implicit-int
+KBUILD_CFLAGS += -Wno-error=deprecated-non-prototype
+KBUILD_CFLAGS += -Wno-error=strict-prototypes
+KBUILD_CFLAGS += -Wno-error=single-bit-bitfield-constant-conversion
